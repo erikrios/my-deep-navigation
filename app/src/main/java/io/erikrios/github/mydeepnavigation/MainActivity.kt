@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        if (v?.id == R.id.btn_open_detail) {
+        if (v?.id == binding.btnOpenDetail.id) {
             val detailIntent = Intent(this@MainActivity, DetailActivity::class.java)
             detailIntent.putExtra(DetailActivity.EXTRA_TITLE, getString(R.string.detail_title))
             detailIntent.putExtra(DetailActivity.EXTRA_MESSAGE, getString(R.string.detail_message))
